@@ -1,0 +1,22 @@
+# Sites grouped by category
+[tech]
+https://techcrunch.com/
+https://www.theverge.com/
+https://www.wired.com/
+https://arstechnica.com/
+https://www.zdnet.com/
+https://www.cnet.com/
+https://www.techradar.com/
+https://www.engadget.com/
+https://www.gizmodo.com/
+https://venturebeat.com/
+https://www.geekwire.com/
+https://www.digitaltrends.com/
+https://www.pcworld.com/
+https://www.androidauthority.com/
+https://thenextweb.com/
+https://www.macrumors.com/
+https://www.infoworld.com/
+https://www.techmeme.com/
+https://www.slashdot.org/
+https://www.theinformation.com/

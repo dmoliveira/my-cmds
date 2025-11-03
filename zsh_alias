@@ -1,0 +1,12 @@
+# Add `open_tabs` to your command list.
+open_tabs() {
+  local script_dir="/Users/<USER>/.../my-cmds"
+  local name="$1"
+
+  if [[ -z "$name" ]]; then
+    echo "Usage: open_tabs <session-name>"
+    return 1
+  fi
+
+  "$script_dir/open_tabs.sh" "$script_dir/data/${name}.txt"
+}

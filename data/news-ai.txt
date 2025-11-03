@@ -1,0 +1,22 @@
+# Sites grouped by category
+[ai]
+https://www.artificialintelligence-news.com/
+https://techcrunch.com/category/artificial-intelligence/
+https://aimagazine.com/
+https://www.ainews.com/
+https://news.mit.edu/topic/artificial-intelligence2
+https://www.wsj.com/tech/ai
+https://ai.google/
+https://www.ap.org/solutions/artificial-intelligence/
+https://dlabs.ai/blog/top-ai-blogs-and-websites-to-follow/
+https://www.superhuman.ai/
+https://venturebeat.com/category/ai/
+https://www.deeplearning.ai/the-batch/
+https://syncedreview.com/
+https://www.marktechpost.com/
+https://www.analyticsvidhya.com/blog/
+https://www.kdnuggets.com/
+https://machinelearningmastery.com/
+https://www.reddit.com/r/MachineLearning/
+https://openai.com/research
+https://huggingface.co/blog

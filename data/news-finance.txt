@@ -1,0 +1,7 @@
+# Sites grouped by category
+[finance]
+https://www.afr.com/
+https://www.businessnews.com.au/
+https://www.smartcompany.com.au/
+https://ausbiz.com.au/
+https://www.wsj.com/

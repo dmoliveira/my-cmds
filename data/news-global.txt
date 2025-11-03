@@ -1,0 +1,10 @@
+# Sites grouped by category
+[news-global]
+https://www.thenewdaily.com.au/
+https://www.bloomberg.com/asia
+https://www.bbc.com/news
+https://www.theguardian.com/au
+https://www.reuters.com/
+https://apnews.com/
+https://www.aljazeera.com/
+https://www.scmp.com/news/china
