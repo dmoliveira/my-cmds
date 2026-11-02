@@ -1,12 +1,21 @@
 # Add `open_tabs` to your command list.
+typeset -g OPEN_TABS_DIR="${${(%):-%x}:A:h}"
 open_tabs() {
-  local script_dir="/Users/<USER>/.../my-cmds"
+  local script_dir="$OPEN_TABS_DIR"
   local name="$1"
 
   if [[ -z "$name" ]]; then
-    echo "Usage: open_tabs <session-name>"
+    echo "Usage: open_tabs <session-name> [topic]"
     return 1
   fi
 
-  "$script_dir/open_tabs.sh" "$script_dir/data/${name}.txt"
+  if [[ "$name" == spanish ]]; then
+    if [[ -n "$2" ]]; then
+      "$script_dir/open_tabs.sh" "$script_dir/data/spanish/$2.txt"
+    else
+      "$script_dir/open_tabs.sh" "$script_dir"/data/spanish/*.txt
+    fi
+  else
+    "$script_dir/open_tabs.sh" "$script_dir/data/${name}.txt"
+  fi
 }

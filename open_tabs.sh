@@ -4,12 +4,15 @@
 # Compatible with macOS and Ubuntu/Linux
 #
 # Usage:
-#   ./open_tabs.sh [optional_path_to_sites.txt]
+#   ./open_tabs.sh [path_to_sites.txt ...]
 
 # Path to file containing list of URLs (one per line)
-URL_FILE="${1:-./sites.txt}"
+if [[ $# -eq 0 ]]; then
+  set -- ./sites.txt
+fi
 
 # --- Validate file ---
+for URL_FILE in "$@"; do
 if [[ ! -f "$URL_FILE" ]]; then
   echo "❌ URL list file not found: $URL_FILE"
   echo "Create one with each site on a new line, e.g.:"
@@ -17,16 +20,19 @@ if [[ ! -f "$URL_FILE" ]]; then
   echo "https://github.com"
   exit 1
 fi
+done
 
 # --- Read URLs from file ---
 URLS=()
-while IFS= read -r line; do
-  [[ -z "$line" || "$line" =~ ^# ]] && continue  # skip blanks and comments
-  URLS+=("$line")
-done < "$URL_FILE"
+for URL_FILE in "$@"; do
+  while IFS= read -r line || [[ -n "$line" ]]; do
+    [[ -z "$line" || "$line" =~ ^# || "$line" =~ ^\[.*\]$ ]] && continue
+    URLS+=("$line")
+  done < "$URL_FILE"
+done
 
 if [[ ${#URLS[@]} -eq 0 ]]; then
-  echo "⚠️  No valid URLs found in $URL_FILE"
+  echo "⚠️  No URLs found in the supplied lists"
   exit 0
 fi
 
@@ -58,4 +64,4 @@ open_chrome() {
 
 # --- Run ---
 open_chrome
-echo "✅ Opened ${#URLS[@]} tabs from $URL_FILE"
+echo "✅ Opened ${#URLS[@]} tabs"

@@ -20,6 +20,20 @@ or simply run without arguments to use the default list (`./sites.txt`):
 Each `.txt` file should contain one URL per line.  
 You can create different themed lists under the `data/` folder (e.g. `news-local.txt`, `news-tech.txt`, `discounts.txt`, etc).
 
+### Spanish learning sessions
+
+Source `zsh_alias` from `~/.zshrc` using its full path. Then use:
+
+```bash
+open_tabs spanish           # all Spanish topics
+open_tabs spanish learning  # one topic
+open_tabs spanish ai
+```
+
+Topics are `learning`, `news`, `travel`, `science`, `ai`, `nintendo`, and `politics`. Edit the corresponding file in `data/spanish/` to add or remove links. Add another topic by creating a new `.txt` file in that directory, with one URL per line; it will automatically be included in `open_tabs spanish` and available as `open_tabs spanish <filename>` (without `.txt`).
+
+Without the shell function, pass one or more lists directly: `./open_tabs.sh data/spanish/learning.txt data/spanish/news.txt`.
+
 ---
 
 ## 🧩 Features
