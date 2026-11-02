@@ -1,6 +1,7 @@
 # Add `open_tabs` to your command list.
+typeset -g OPEN_TABS_DIR="${${(%):-%x}:A:h}"
 open_tabs() {
-  local script_dir="/Users/<USER>/.../my-cmds"
+  local script_dir="$OPEN_TABS_DIR"
   local name="$1"
 
   if [[ -z "$name" ]]; then

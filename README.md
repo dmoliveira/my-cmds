@@ -22,7 +22,7 @@ You can create different themed lists under the `data/` folder (e.g. `news-local
 
 ### Spanish learning sessions
 
-Configure the `open_tabs` function in `zsh_alias` with your repository path and source it from `~/.zshrc`. Then use:
+Source `zsh_alias` from `~/.zshrc` using its full path. Then use:
 
 ```bash
 open_tabs spanish           # all Spanish topics
